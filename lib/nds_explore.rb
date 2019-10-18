@@ -9,8 +9,12 @@ def pretty_print_nds(nds)
 end
 
 def print_first_directors_movie_titles
-  data = directors_database
-  
+  data = nds
+  string = ""
+  data[0][:movies].each do |movie|
+    string += movie[:title] + "\n"
+  end
+  string
 end
 
 
